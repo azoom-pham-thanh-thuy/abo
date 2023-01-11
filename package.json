@@ -9,6 +9,10 @@
   },
   "devDependencies": {
     "nuxt": "3.0.0",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0"
+  },
+  "dependencies": {
+    "@vuestic/nuxt": "^1.0.9"
   }
 }

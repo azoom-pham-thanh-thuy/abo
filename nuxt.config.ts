@@ -8,6 +8,12 @@ export default defineNuxtConfig({
       title: 'Nuxt 3',
       meta: [
         { name: 'description', content: 'Nuxt 3' } // ~ <meta name="description" content="Nuxt 3">
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap'
+        }
       ]
     }
   },
