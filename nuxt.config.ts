@@ -1,4 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import vuetify from 'vite-plugin-vuetify';
+
 export default defineNuxtConfig({
   ssr: false,
   app: {
@@ -11,7 +14,14 @@ export default defineNuxtConfig({
       ]
     }
   },
-  css: ['@/assets/scss/main.scss'],
+  css: ['@/assets/scss/main.scss', 'vuetify/styles'],
+  modules: [
+    async (options, nuxt) => {
+      nuxt.hooks.hook('vite:extendConfig', (config) =>
+        config.plugins?.push(vuetify())
+      );
+    }
+  ],
   vite: {
     css: {
       preprocessorOptions: {
